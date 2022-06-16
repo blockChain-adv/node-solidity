@@ -1,76 +1,57 @@
-const CONTACT_ADDRESS = ''
+const ADVERTISING_ADDRESS = ''
 
-const CONTACT_ABI = [
+const ADVERTISING_ABI = [
+  { inputs: [], stateMutability: 'nonpayable', type: 'constructor' },
   {
-    inputs: [],
-    stateMutability: 'nonpayable',
-    type: 'constructor',
+    anonymous: false,
+    inputs: [[Object], [Object], [Object], [Object]],
+    name: 'AddAdv',
+    type: 'event',
   },
   {
-    inputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
-    name: 'contacts',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: 'id',
-        type: 'uint256',
-      },
-      {
-        internalType: 'string',
-        name: 'name',
-        type: 'string',
-      },
-      {
-        internalType: 'string',
-        name: 'phone',
-        type: 'string',
-      },
-    ],
-    stateMutability: 'view',
+    anonymous: false,
+    inputs: [[Object], [Object]],
+    name: 'IsCall',
+    type: 'event',
+  },
+  {
+    inputs: [[Object], [Object], [Object], [Object]],
+    name: 'addAdv',
+    outputs: [[Object]],
+    stateMutability: 'payable',
     type: 'function',
-    constant: true,
+  },
+  {
+    inputs: [[Object]],
+    name: 'callReward',
+    outputs: [[Object]],
+    stateMutability: 'nonpayable',
+    type: 'function',
   },
   {
     inputs: [],
-    name: 'count',
-    outputs: [
-      {
-        internalType: 'uint256',
-        name: '',
-        type: 'uint256',
-      },
-    ],
+    name: 'getAllAdv',
+    outputs: [[Object]],
     stateMutability: 'view',
     type: 'function',
-    constant: true,
   },
   {
-    inputs: [
-      {
-        internalType: 'string',
-        name: '_name',
-        type: 'string',
-      },
-      {
-        internalType: 'string',
-        name: '_phone',
-        type: 'string',
-      },
-    ],
-    name: 'createContact',
-    outputs: [],
-    stateMutability: 'nonpayable',
+    inputs: [],
+    name: 'getAllperson',
+    outputs: [[Object]],
+    stateMutability: 'view',
+    type: 'function',
+  },
+  {
+    inputs: [],
+    name: 'getMyAdv',
+    outputs: [[Object]],
+    stateMutability: 'view',
     type: 'function',
   },
 ]
 
 module.exports = {
-  CONTACT_ABI,
-  CONTACT_ADDRESS,
+  ADVERTISING_ABI,
+  ADVERTISING_ADDRESS,
 }
